@@ -1,9 +1,20 @@
-import Programme from './components/programme'
+import Programme from './components/programmeMUI';
 import setuCrest from "./assets/setu_crest.png";
-import './App.css'
+import Box from "@mui/material/Box";
+
+const styles = {
+  appHeader: {
+    backgroundColor: "lightblue",
+    height: "200px",
+    padding: "10px",
+    color: "white",
+  },
+  course: {
+    padding: 2,
+  },
+};
 
 const App = () => {
-  // Substitute your module names here.
   const modules = [
     {
       name: "Cloud Architecture",
@@ -33,17 +44,15 @@ const App = () => {
   ];
   const name = "HDip in Computer Science";
 
-
   return (
     <>
-      <header className="App-header">
-        <img className="center img-fluid" src={setuCrest} alt="logo" />
+      <header style={styles.appHeader}>
+        <img src={setuCrest} alt="logo" />
       </header>
-      <div className="programme">
+      <Box sx={styles.course}>
         <Programme title={name} modules={modules} />
-      </div>
+      </Box>
     </>
-  )
-}
-
-export default App
+  );
+};
+export default App;
