@@ -1,5 +1,5 @@
 import Programme from './components/programme'
-import setuLogo from './assets/setuLogo.png';
+import setuCrest from "./assets/setu_crest.png";
 import './App.css'
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
   return (
     <>
       <header className="App-header">
-        <img className="center" src={setuLogo} alt="logo" />
+        <img className="center img-fluid" src={setuCrest} alt="logo" />
       </header>
       <div className="programme">
         <Programme title={name} modules={modules} />
